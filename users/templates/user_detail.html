@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="post-entry">
+    <h2>{{ object.name }}</h2>
+      <p>{{ object.birthday }}</p>
+      <p>{{object.gender}}</p>
+  </div>
+
+  <p><a href="{% url 'user_edit' user.pk %}">+ Edit UserList</a></p>
+  <p><a href="{% url 'user_delete' user.pk %}">+ Delete UserList</a></p>
+
+{% endblock content %}
